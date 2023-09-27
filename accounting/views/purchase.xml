@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_purchase_order_form_inherit_l10n_in_purchase" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.l10n.in.purchase</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position='after'>
+                <field name="link" string="Link"  widget="CopyClipboardChar"/>
+            </xpath>
+            <xpath expr="//header/button[@name='action_rfq_send']" position="after">
+                    <button type="object" class="oe_stat_button" style="background-color: #25D366;color: white;"
+                        name="action_send_whatsapp" icon="fa-whatsapp" string="Send by Whatsapp"/>
+            </xpath>
+
+
+        </field>
+    </record>
+</odoo>

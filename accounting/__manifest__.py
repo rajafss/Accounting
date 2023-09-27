@@ -23,15 +23,17 @@
     'depends': ['base',
                 'sale',
                 'account',
-                'contacts'],
+                'contacts',
+                'sale_management',
+                'l10n_de_purchase'],
 
     # always loaded
     'data': [
         'views/account_bills.xml',
-        'views/res_partner.xml'
-        # 'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'views/templates.xml',
+        'views/res_partner.xml',
+        'views/salesOrder.xml',
+        'views/payment.xml',
+        'views/purchase.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
